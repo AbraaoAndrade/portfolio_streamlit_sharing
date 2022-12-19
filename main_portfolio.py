@@ -10,7 +10,7 @@ st.set_page_config(page_title="Portfolio",
                     layout="centered",
                     initial_sidebar_state="auto")
 
-img_head = Image.open(r"images\head.png")
+img_head = "https://raw.githubusercontent.com/AbraaoAndrade/portfolio_streamlit_sharing/main/images/head.png"
   
 title = "Work"     
 subtitle =  '''Check my commercioal and non commercial projects.
