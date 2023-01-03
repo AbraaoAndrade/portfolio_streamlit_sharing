@@ -23,3 +23,12 @@ def send_email(sender, password, receiver, smtp_server, smtp_port, email_message
     text = message.as_string()
     server.sendmail(sender, receiver, text)
     server.quit()
+
+def nav_to(url):
+    import streamlit as st
+    
+    nav_script = """
+        <meta http-equiv="refresh" content="0; url='%s'">
+    """ % (url)
+    
+    st.write(nav_script, unsafe_allow_html=True)

@@ -47,7 +47,8 @@ def main():
     value = presentation_card(image_path= "https://raw.githubusercontent.com/AbraaoAndrade/portfolio_streamlit_sharing/main/images/lowquality_fotominha.jpg", #"https://raw.githubusercontent.com/AbraaoAndrade/portfolio_streamlit_sharing/main/images/profile.png",
                               name="Abraão Andrade",
                               post="Cientista de Dados Júnior",
-                              description="Atua como Pesquisador no Instituto do Cérebro UFRN e Estagiário em Análise de Dados e Automação de Processos no Supermercado Nordestão")
+                              description="Atuo como Iniciante Ciêntifico no Instituto do Cérebro - UFRN, trabalho pelo qual ja recebi 2 premiações (2020 e 2022), \
+                                             e Estagiário em Análise de Dados e Automação de Processos no Supermercado Nordestão")
 
 
     # WORKS =================================================================================================================================================================================
@@ -56,7 +57,9 @@ def main():
                                cards=cards)
     if value == "prospecção_de_clientes_b2b":
         # st.markdown('<meta http-equiv="refresh" content="0;url=https://abraaoandrade-b2b-prospection-b2b-prospection-app-tt1db1.streamlit.app">', unsafe_allow_html=True)
-        webbrowser.open("https://abraaoandrade-b2b-prospection-b2b-prospection-app-tt1db1.streamlit.app", new=0)
+        # webbrowser.open("https://abraaoandrade-b2b-prospection-b2b-prospection-app-tt1db1.streamlit.app", new=0)
+        nav_to("https://abraaoandrade-b2b-prospection-b2b-prospection-app-tt1db1.streamlit.app")
+
     if value == "zenk_project":
         None
     if value == "bird_tracking":
