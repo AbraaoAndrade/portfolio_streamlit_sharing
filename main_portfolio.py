@@ -9,7 +9,6 @@ from portfolio_carousel import portfolio_carousel
 from PIL import Image
 import os
 import time
-import webbrowser
 
 from utils import *
 
@@ -56,14 +55,11 @@ def main():
                                subtitle=subtitle,
                                cards=cards)
     if value == "prospecção_de_clientes_b2b":
-        # st.markdown('<meta http-equiv="refresh" content="0;url=https://abraaoandrade-b2b-prospection-b2b-prospection-app-tt1db1.streamlit.app">', unsafe_allow_html=True)
-        # webbrowser.open("https://abraaoandrade-b2b-prospection-b2b-prospection-app-tt1db1.streamlit.app", new=0)
-        nav_to("https://abraaoandrade-b2b-prospection-b2b-prospection-app-tt1db1.streamlit.app")
-
+        nav_to("https://b2bprospection.streamlit.app")
     if value == "zenk_project":
-        None
+        nav_to("https://egr1project.streamlit.app")
     if value == "bird_tracking":
-        None
+        nav_to("https://birdtracking.streamlit.app")
 
     st.markdown("")
     st.markdown("")
