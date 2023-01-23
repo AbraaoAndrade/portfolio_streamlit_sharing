@@ -22,9 +22,9 @@ img_head = "https://raw.githubusercontent.com/AbraaoAndrade/portfolio_streamlit_
 title = "Work"     
 subtitle =  '''Check my commercioal and non commercial projects.
             If you have any questions feel free to ask me for more information'''
-cards = [["https://raw.githubusercontent.com/AbraaoAndrade/portfolio_streamlit_sharing/main/images/zenk.jpg", "ZENK project", "Web Scraping | RPA | Data Anlysis", "A formação da memória requer a expressão gênica induzida pela atividade neuronal. Esta resposta inclui uma série de genes dependentes de atividade tidos como mediadores das mudanças necessárias para a consolidação e manutenção da memória."],
-        ["https://raw.githubusercontent.com/AbraaoAndrade/portfolio_streamlit_sharing/main/images/b2b.jpg", "Prospecção de Clientes B2B", "Google API | Python | Streamlit", "Aplicação para prospectar potenciais clientes B2B no Rio Grande do Norte utilizando uma API da Google chamada Places."],
-        ["https://raw.githubusercontent.com/AbraaoAndrade/portfolio_streamlit_sharing/main/images/tracking.jpg", "Bird Tracking", "Data Processing | Data Visualization", "Aplicação para processar dados de coordenadas e gerar visualizações em mapa de calor."]]
+cards = [["https://raw.githubusercontent.com/AbraaoAndrade/portfolio_streamlit_sharing/main/images/zenk.jpg", "ZENK project", "Web Scraping | RPA | Data Anlysis", "https://egr1project.streamlit.app", "A formação da memória requer a expressão gênica induzida pela atividade neuronal. Esta resposta inclui uma série de genes dependentes de atividade tidos como mediadores das mudanças necessárias para a consolidação e manutenção da memória."],
+        ["https://raw.githubusercontent.com/AbraaoAndrade/portfolio_streamlit_sharing/main/images/b2b.jpg", "Prospecção de Clientes B2B", "Google API | Python | Streamlit", "https://b2bprospection.streamlit.app" ,"Aplicação para prospectar potenciais clientes B2B no Rio Grande do Norte utilizando uma API da Google chamada Places."],
+        ["https://raw.githubusercontent.com/AbraaoAndrade/portfolio_streamlit_sharing/main/images/tracking.jpg", "Bird Tracking", "Data Processing | Data Visualization", "https://birdtracking.streamlit.app" ,"Aplicação para processar dados de coordenadas e gerar visualizações em mapa de calor."]]
 
 t0 = time.time()    
 
@@ -54,12 +54,12 @@ def main():
     value = portfolio_carousel(title=title,
                                subtitle=subtitle,
                                cards=cards)
-    if value == "prospecção_de_clientes_b2b":
-        nav_to("https://b2bprospection.streamlit.app")
-    if value == "zenk_project":
-        nav_to("https://egr1project.streamlit.app")
-    if value == "bird_tracking":
-        nav_to("https://birdtracking.streamlit.app")
+    # if value == "prospecção_de_clientes_b2b":
+    #     nav_to("https://b2bprospection.streamlit.app")
+    # if value == "zenk_project":
+    #     nav_to("https://egr1project.streamlit.app")
+    # if value == "bird_tracking":
+    #     nav_to("https://birdtracking.streamlit.app")
 
     st.markdown("")
     st.markdown("")
