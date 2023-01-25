@@ -24,6 +24,8 @@ def send_email(sender, password, receiver, smtp_server, smtp_port, email_message
     server.sendmail(sender, receiver, text)
     server.quit()
 
+    return True
+
 def nav_to(url):
     # import streamlit as st
     
@@ -35,3 +37,26 @@ def nav_to(url):
 
     import webbrowser
     webbrowser.open(url) 
+
+def trigger_download(data, filename) -> str:
+    import base64
+    b64 = base64.b64encode(data).decode()
+    dl_link = f"""
+                <html>
+                <head>
+                <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+                <script>
+                $('<a href="data:application/octet-stream;base64,{b64}" download="{filename}">')[0].click()
+                </script>
+                </head>
+                </html>"""
+    return dl_link
+
+def download_cv() -> None:
+    import streamlit.components.v1 as components
+
+    with open("data\CV_abraao_andrade.pdf", "rb") as pdf_file:
+        PDFbyte = pdf_file.read()
+    trigger = trigger_download(PDFbyte, "abraao_andrade_cv.pdf")
+    components.html(html=trigger, height=0, width=0)
+    return

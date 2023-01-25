@@ -43,23 +43,16 @@ def main():
     st.image(img_head, use_column_width=True)
 
     # PRESENTATION ==========================================================================================================================================================================
-    value = presentation_card(image_path= "https://raw.githubusercontent.com/AbraaoAndrade/portfolio_streamlit_sharing/main/images/lowquality_fotominha.jpg", #"https://raw.githubusercontent.com/AbraaoAndrade/portfolio_streamlit_sharing/main/images/profile.png",
+    value_presentation = presentation_card(image_path= "https://raw.githubusercontent.com/AbraaoAndrade/portfolio_streamlit_sharing/main/images/lowquality_fotominha.jpg", #"https://raw.githubusercontent.com/AbraaoAndrade/portfolio_streamlit_sharing/main/images/profile.png",
                               name="Abraão Andrade",
-                              post="Cientista de Dados Júnior",
-                              description="Atuo como Iniciante Ciêntifico no Instituto do Cérebro - UFRN, trabalho pelo qual ja recebi 2 premiações (2020 e 2022), \
-                                             e Estagiário em Análise de Dados e Automação de Processos no Supermercado Nordestão")
-
+                              post="Cientista de Dados",
+                              description=" 2+ anos de experiência no desenvolvimento de soluções orientadas a dados tanto na Ciência quanto no Mercado. Atuo como Analista de Dados no Instituto ...")
+                              # do Cérebro - UFRN e Estagiário em Análise de Dados e Automação de Processos no Supermercado Nordestão
 
     # WORKS =================================================================================================================================================================================
     value = portfolio_carousel(title=title,
                                subtitle=subtitle,
                                cards=cards)
-    # if value == "prospecção_de_clientes_b2b":
-    #     nav_to("https://b2bprospection.streamlit.app")
-    # if value == "zenk_project":
-    #     nav_to("https://egr1project.streamlit.app")
-    # if value == "bird_tracking":
-    #     nav_to("https://birdtracking.streamlit.app")
 
     st.markdown("")
     st.markdown("")
@@ -137,19 +130,29 @@ def main():
         ---------------------------------------------------------------------------- \n \n
         """.format(email, fullname)
 
-        if checkbox_access:
-            access_info = """
-            Username: {}
-            Password: {}
-            \n
-            """.format(username, Hasher(password).generate())
-            extra_info = extra_info + access_info
-
         message = extra_info + text
 
-        send_email(sender=st.secrets["EMAIL_USER"], password=st.secrets["EMAIL_KEY"],
-                   receiver=st.secrets["EMAIL_USER"], smtp_server="smtp.gmail.com", smtp_port=587,
-                   email_message=message, subject="B2B prospection APP")
+        # send_email(sender=st.secrets["EMAIL_USER"], password=st.secrets["EMAIL_KEY"],
+        #            receiver=st.secrets["EMAIL_USER"], smtp_server="smtp.gmail.com", smtp_port=587,
+        #            email_message=message, subject="B2B prospection APP")
+        EMAIL_USER = 'lukandrad5@gmail.com'
+        EMAIL_KEY = 'aprwwhxpngrdtpea'
+        send_email(sender=EMAIL_USER, password=EMAIL_KEY,
+                   receiver=EMAIL_USER, smtp_server="smtp.gmail.com", smtp_port=587,
+                   email_message=message, subject="Portfolio APP")
+
+        st.success('Mensagem enviada!', icon="✅")
+    
+
+
+    if value_presentation == "contatar":
+        components.html(
+            "<script>window.parent.document.querySelector('section.main').scrollTo(0, 10000);</script>",
+            height=0,
+        )
+
+    if value_presentation == "cv":
+        download_cv()
 
 
 if __name__ == '__main__':
