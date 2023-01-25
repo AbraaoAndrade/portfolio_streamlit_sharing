@@ -55,7 +55,7 @@ def trigger_download(data, filename) -> str:
 def download_cv() -> None:
     import streamlit.components.v1 as components
 
-    with open("/app/portfolio_streamlit_sharing/data/CV_abraao_andrade.pdf", "rb") as pdf_file:
+    with open("./data/CV_abraao_andrade.pdf", "rb") as pdf_file:
         PDFbyte = pdf_file.read()
     trigger = trigger_download(PDFbyte, "abraao_andrade_cv.pdf")
     components.html(html=trigger, height=0, width=0)
