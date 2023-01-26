@@ -61,7 +61,7 @@ def main():
     
     st.markdown(title_html.format("Skills"), unsafe_allow_html=True)
     skills_html = "<h1 style='text-align: left; vertical-align:center; color: black; font-size: 18px;'>{} </h1> "
-    certif_html = "[![Title](https://img.icons8.com/material-sharp/20/null/link--v1.png)]({})"
+    certif_html = "[![Title](https://img.icons8.com/ios/20/null/contract.png)]({})"
 
     c1, c2, c3, c4 = st.columns([1.2,5.3,2.8,3.7])
     with c1:
