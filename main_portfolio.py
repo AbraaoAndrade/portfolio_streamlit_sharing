@@ -47,7 +47,7 @@ def main():
     value = presentation_card(image_path= "https://raw.githubusercontent.com/AbraaoAndrade/portfolio_streamlit_sharing/main/images/fotominha.jpg", #"https://raw.githubusercontent.com/AbraaoAndrade/portfolio_streamlit_sharing/main/images/profile.png",
                               name="Abraão Andrade",
                               post="Cientista de Dados Júnior",
-                              description="Atua como Pesquisador no Instituto do Cérebro UFRN e Estagiário em Análise de Dados e Automação de Processos no Supermercado Nordestão")
+                              description="3+ anos de experiência no desenvolvimento de soluções orientadas a dados tanto na Ciência quanto no Mercado. Graduando em Engenharia Biomédica ...")
 
 
     # WORKS =================================================================================================================================================================================
