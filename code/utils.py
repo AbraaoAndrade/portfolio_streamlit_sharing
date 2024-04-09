@@ -57,6 +57,6 @@ def download_cv() -> None:
 
     with open("./data/CV_abraao_andrade_2024.pdf", "rb") as pdf_file:
         PDFbyte = pdf_file.read()
-    trigger = trigger_download(PDFbyte, "abraao_andrade_cv.pdf")
+    trigger = trigger_download(PDFbyte, "abraao_andrade_cv_2024.pdf")
     components.html(html=trigger, height=0, width=0)
     return
