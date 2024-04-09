@@ -1,4 +1,4 @@
 Pillow==9.4.0
-portfolio_carousel==0.1.4
-presentation_card==0.1.7
+portfolio_carousel==0.1.5
+presentation_card==0.1.8
 streamlit==1.16.0
